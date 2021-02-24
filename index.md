@@ -54,7 +54,7 @@
 .Sito-card:hover {
  width: 120%;  
   box-shadow: 5px 10px 18px rgba(91,130,187,0.8);
-  position:relative
+  position:relative;
   margin-right:4%
  
 }
