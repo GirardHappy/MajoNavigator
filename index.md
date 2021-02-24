@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head> 
-  <title> Majo Navigator </title>
 <style>
 
 .center {
