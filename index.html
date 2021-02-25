@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title> Majo Navigator </title>
+<style>
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+#tabella {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.Classeviva-card { box-shadow: 5px 10px 18px rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  width:100%;
+}
+
+.Classeviva-card:hover {
+ width: 110%;  
+  box-shadow: 5px 10px 18px rgba(193,0,31, 0.8);
+  position:relative
+ 
+}
+
+.Moodle-card { box-shadow: 5px 10px 18px rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  width:100%;
+}
+
+.Moodle-card:hover {
+ width: 110%;  
+  box-shadow: 5px 10px 18px rgba(249,128,18,0.8);
+  position:relative
+ 
+}
+
+.Orario-card { box-shadow: 5px 10px 18px rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  width:100%;
+}
+
+.Orario-card:hover {
+ width: 110%;  
+  box-shadow: 5px 10px 18px rgba(67,180,134,0.8);
+  position:relative
+ 
+}
+
+.Sito-card { box-shadow: 5px 10px 18px rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  width:100%;
+}
+
+.Sito-card:hover {
+ width: 110%;  
+  box-shadow: 5px 10px 18px rgba(91,130,187,0.8);
+  position:relative;
+  margin-right:4%
+ 
+}
+
+</style>
+</head>
+
+<body style="background-color: black;">
+<!-- BODY -->
+
+<!-- IMMAGINE X SETTINGS -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Classe <br>Coming Soon </a>
+</div>
+  <div id="main">
+    <img src="MajoNavigator.png" style="width: 60%;" class="center" onclick="openNav()"></div>
+  </div>
+
+
+
+
+  <!-- Tabella -->
+<div id="tabella">
+<table class="table"
+style=" margin-left: auto;
+margin-right: auto;">
+<table class="table" 
+style=" margin-left: 10px;
+margin-right: 10px;">
+
+<tr>
+  
+  
+  <!-- Classeviva -->
+  <td>
+
+    <a href="https://web.spaggiari.eu/home/app/default/login.php?custcode=TOIT0030">
+  <img src="Classeviva.png" style="margin-right:3px" class="Classeviva-card">
+</a>
+</td>
+
+
+<!-- Moodle -->
+<td>
+<a href="http://moodle.itismajo.it/">
+  <img src="Moodle.png" style="margin-right:3px" class="Moodle-card"></div>
+</a>
+</td>
+
+
+<!-- Orario -->
+<td>
+  <a href="http://www.itismajo.it/orario/index.html">
+      <img src="Orario.png" style="margin-right:3px" class="Orario-card"></div>
+  </a>
+  </td>
+
+
+  <!-- Sito -->
+<td>
+ <a href="http://www.itismajo.it/SitePages/Homepage.aspx">
+      <img src="Sito.png" style="margin-right:3px" class="Sito-card"></div>
+  </a>
+  </td>
+
+
+
+</tr>
+</table>
+</table>
+</div>
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("tabella").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.getElementById("tabella").style.marginLeft = "0";
+    document.body.style.backgroundColor = "rgba(0,0,0,1)";
+  }
+  </script>
+
+
+</body>
+</html>
