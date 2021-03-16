@@ -3,8 +3,26 @@
 <head> 
   <title> Majo Navigator </title>
  <link rel="shortcut icon" type="image/jpg" href="/M.png"/>
-  
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
 <style>
+
+.scritta {
+  font-family: 'Open+Sans:wght@300&display=swap';
+  font-size: 20px;
+  color: white;
+  margin-left: 15%;
+   margin-top: 15%;
+}
+
+.credits {
+  font-family: 'Open+Sans:wght@300&display=swap';
+  font-size: 10px;
+  color: white;
+  margin-left: 60%;
+  margin-top: 220%;
+}
 
 .sidenav {
   height: 100%;
@@ -106,8 +124,64 @@
  width: 110%;  
   box-shadow: 5px 10px 18px rgba(91,130,187,0.8);
   position:relative;
-  margin-right:4%
+  margin-right:4%;
+  transition: 0.3s;
  
+}
+
+.Salva {
+  position: absolute;
+  left: 45%;
+  top: 24%;
+  transform: translate(-50%, -50%);
+  color: #cecd24;
+  text-decoration: none;
+  font-size: 0.75em;
+  display: inline-block;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  padding: 0.5em 2em;
+  border: 2px solid #cecd24;
+  transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.Salva::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #cecd24;
+  transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+  z-index: -1;
+}
+.Salva::after {
+  content: "";
+  display: inline-block;
+  background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+  position: absolute;
+  top: 0;
+  left: calc(100% - 3em);
+  right: 3em;
+  bottom: 0;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.Salva:hover {
+  padding: 0.5em 3.5em 0.5em 0.5em;
+}
+.Salva:hover::before {
+  left: calc(100% - 3em);
+  right: 0;
+  transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.Salva:hover::after {
+  right: 0;
+  transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
 }
 
 </style>
@@ -115,14 +189,71 @@
 
 <body style="background-color: black;">
 <!-- BODY -->
-
 <!-- IMMAGINE X SETTINGS -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Classe <br>Coming Soon </a>
+  <p class="scritta" > Scegli la tua classe </p>
+<select name="options" id="options" style="margin-left: 20%; width: 50%;">
+  <option value="default" selected="false">Default</option>
+  <option value="1 A">1 A</option>
+  <option value="1 B">1 B</option>
+  <option value="1 C">1 C</option>
+  <option value="1 D">1 D</option>
+  <option value="1 E">1 E</option>
+  <option value="1 F">1 F</option>
+  <option value="1 G">1 G</option>
+  <option value="1 H">1 H</option>
+  <option value="1 I">1 I</option>
+  <option value="1 N">1 N</option>
+  <option value="1 O">1 O</option>
+  <option value="2 A">2 A</option>
+  <option value="2 B">2 B</option>
+  <option value="2 C">2 C</option>
+  <option value="2 D">2 D</option>
+  <option value="2 E">2 E</option>
+  <option value="2 F">2 F</option>
+  <option value="2 H">2 H</option>
+  <option value="2 I">2 I</option>
+  <option value="2 L">2 L</option>
+  <option value="2 N">2 N</option>
+  <option value="2 O">2 O</option>
+  <option value="3 A Aut">3 A Aut</option>
+  <option value="3 A Bio">3 A Bio</option>
+  <option value="3 A Inf">3 A Inf</option>
+  <option value="3 B Aut">3 B Aut</option>
+  <option value="3 B Bio">3 B Bio</option>
+  <option value="3 B Inf">3 B Inf</option>
+  <option value="3 C Aut">3 C Aut</option>
+  <option value="3 C Inf">3 C Inf</option>
+  <option value="3 D Inf">3 D Inf</option>
+  <option value="3 TLC">3 TLC</option>
+  <option value="4 A Aut">4 A Aut</option>
+  <option value="4 A Bio">4 A Bio</option>
+  <option value="4 A Inf">4 A Inf</option>
+  <option value="4 B Aut">4 B Aut</option>
+  <option value="4 B Bio">4 B Bio</option>
+  <option value="4 B Inf">4 B Inf</option>
+  <option value="4 C Aut">4 C Aut</option>
+  <option value="4 C Inf">4 C Inf</option>
+  <option value="4 D Aut">4 D Aut</option>
+  <option value="4 D Inf">4 D Inf</option>
+  <option value="5 A Aut">5 A Aut</option>
+  <option value="5 A Bio">5 A Bio</option>
+  <option value="5 A Inf">5 A Inf</option>
+  <option value="5 B Aut">5 B Aut</option>
+  <option value="5 B Bio">5 B Bio</option>
+  <option value="5 B Inf">5 B Inf</option>
+  <option value="5 C Eln">5 C Eln</option>
+  <option value="5 C Inf">5 C Inf</option>
+  <option value="5 D Aut">5 D Aut</option>
+  <option value="5 D Inf">5 D Inf</option>
+</select>
+</br>
+<div class="Salva" onclick="setcookie()">Salva</div>
+<p class="credits"> Site made by Girard </p>
 </div>
   <div id="main">
-    <img src="MajoNavigator.png" style="width: 60%;" class="center" onclick="openNav()"></div>
+    <img src="MajoNavigator.png" style="width: 60%;" class="center" onclick="openNav()" id="Titolo"></div>
   </div>
 
 
@@ -144,23 +275,23 @@ margin-right: 10px;">
   <td>
 
     <a href="https://web.spaggiari.eu/home/app/default/login.php?custcode=TOIT0030">
-  <img src="Classeviva.png" style="margin-right:3px" class="Classeviva-card">
+  <img src="Classeviva.png" style="margin-right:3px" class="Classeviva-card" id="Classeviva">
 </a>
 </td>
 
 
 <!-- Moodle -->
 <td>
-<a href="http://moodle.itismajo.it/">
-  <img src="Moodle.png" style="margin-right:3px" class="Moodle-card"></div>
+<a href="http://moodle.itismajo.it/" id="Moodle-link">
+  <img src="Moodle.png" style="margin-right:3px" class="Moodle-card" id="Moodle"></div>
 </a>
 </td>
 
 
 <!-- Orario -->
 <td>
-  <a href="http://www.itismajo.it/orario/index.html">
-      <img src="Orario.png" style="margin-right:3px" class="Orario-card"></div>
+  <a href="http://www.itismajo.it/orario/index.html" id="Orario-link">
+      <img src="Orario.png" style="margin-right:3px" class="Orario-card" id="Orario"></div>
   </a>
   </td>
 
@@ -168,7 +299,7 @@ margin-right: 10px;">
   <!-- Sito -->
 <td>
  <a href="http://www.itismajo.it/SitePages/Homepage.aspx">
-      <img src="Sito.png" style="margin-right:3px" class="Sito-card"></div>
+      <img src="Sito.png" style="margin-right:3px" class="Sito-card" id="Sito"></div>
   </a>
   </td>
 
@@ -184,6 +315,11 @@ margin-right: 10px;">
     document.getElementById("main").style.marginLeft = "250px";
     document.getElementById("tabella").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("Classeviva").style.opacity = "0.2";
+    document.getElementById("Moodle").style.opacity = "0.2";
+    document.getElementById("Orario").style.opacity = "0.2";
+    document.getElementById("Sito").style.opacity = "0.2";
+    document.getElementById("Titolo").style.opacity = "0.2";
   }
   
   function closeNav() {
@@ -191,7 +327,310 @@ margin-right: 10px;">
     document.getElementById("main").style.marginLeft= "0";
     document.getElementById("tabella").style.marginLeft = "0";
     document.body.style.backgroundColor = "rgba(0,0,0,1)";
+    document.getElementById("Classeviva").style.opacity = "1";
+    document.getElementById("Moodle").style.opacity = "1";
+    document.getElementById("Orario").style.opacity = "1";
+    document.getElementById("Sito").style.opacity = "1";
+    document.getElementById("Titolo").style.opacity = "1";
   }
+
+  window.onload = function() {
+  var cookiecount = document.cookie.split("; ");
+  var foundcookie = false;
+  for (var i = 0; i < cookiecount.length; i++) {
+    var cookie = cookiecount[i].split("=");
+    if (cookie[0] == "preference") {
+      foundcookie = cookie[1]
+    }
+  }
+  if (foundcookie == false) {
+    document.cookie = "preference=default; ";
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/index.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/";
+  } else if (foundcookie == "1 A") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20A.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=32";
+  } else if (foundcookie == "1 B") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20B.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=34";
+  } else if (foundcookie == "1 C") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20C.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=35";
+  } else if (foundcookie == "1 D") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20D.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=36";
+  } else if (foundcookie == "1 E") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20E.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=38";
+  } else if (foundcookie == "1 F") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20F.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=39";
+  } else if (foundcookie == "1 G") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20G.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=138";
+  } else if (foundcookie == "1 H") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20H.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=41";
+  } else if (foundcookie == "1 I") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20I.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=42";
+  } else if (foundcookie == "1 N") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20N.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=45";
+  } else if (foundcookie == "1 O") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/1%20O.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=94";
+  } else if (foundcookie == "2 A") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20A.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=51";
+  } else if (foundcookie == "2 B") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20B.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=52";
+  } else if (foundcookie == "2 C") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20C.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=53";
+  } else if (foundcookie == "2 D") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20D.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=54";
+  } else if (foundcookie == "2 E") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20E.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=55";
+  } else if (foundcookie == "2 F") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20F.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=56";
+  } else if (foundcookie == "2 H") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20H.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=58";
+  } else if (foundcookie == "2 I") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20I.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=59";
+  } else if (foundcookie == "2 L") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20L.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=60";
+  } else if (foundcookie == "2 N") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20N.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=62";
+  } else if (foundcookie == "2 O") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/2%20O.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=115";
+  } else if (foundcookie == "3 A Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20A%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=66";
+  }  else if (foundcookie == "3 A Bio") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20A%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=10";
+  }  else if (foundcookie == "3 A Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20A%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=12";
+  }  else if (foundcookie == "3 B Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20B%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=68";
+  }  else if (foundcookie == "3 B Bio") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20B%20Bio.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=95";
+  }  else if (foundcookie == "3 B Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20B%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=13";
+  }  else if (foundcookie == "3 C Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20C%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=70";
+  }  else if (foundcookie == "3 C Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20C%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=17";
+  }  else if (foundcookie == "3 D Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20D%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=20";
+  }  else if (foundcookie == "3 TLC") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/3%20TLC.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=135";
+  }  else if (foundcookie == "4 A Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20A%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=67";
+  }  else if (foundcookie == "4 A Bio") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20A%20Bio.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=11";
+  }  else if (foundcookie == "4 A Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20A%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=22";
+  }  else if (foundcookie == "4 B Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20B%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=72";
+  }  else if (foundcookie == "4 B Bio") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20B%20Bio.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=112";
+  }  else if (foundcookie == "4 B Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20B%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=23";
+  }  else if (foundcookie == "4 C Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20C%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=136";
+  }  else if (foundcookie == "4 C Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20C%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=24";
+  }  else if (foundcookie == "4 D Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20D%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=97";
+  }  else if (foundcookie == "4 D Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/4%20D%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=25";
+  }  else if (foundcookie == "5 A Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20A%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=74";
+  }  else if (foundcookie == "5 A Bio") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20A%20Bio.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=96";
+  }  else if (foundcookie == "5 A Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20A%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=26";
+  }  else if (foundcookie == "5 B Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20B%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=75";
+  }  else if (foundcookie == "5 B Bio") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20B%20Bio.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=137";
+  }  else if (foundcookie == "5 B Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20B%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=28";
+  }  else if (foundcookie == "5 C Eln") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20C%20Eln.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=101";
+  }  else if (foundcookie == "5 C Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20C%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=29";
+  }  else if (foundcookie == "5 D Aut") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20D%20Aut.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=113";
+  }  else if (foundcookie == "5 D Inf") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/Classi/5%20D%20Inf.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/course/index.php?categoryid=30";
+  }  else {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/index.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/";
+  }
+}
+
+function setcookie() {
+  var userpreference = document.getElementById("options").value;
+  document.cookie = "preference=" + userpreference.toString() + "; ";
+  window.location.reload();
+  if (userpreference == "default") {
+    var a = document.getElementById("Orario-link");
+    a.href = "http://www.itismajo.it/orario/index.html";
+    var a = document.getElementById("Moodle-link");
+    a.href = "http://moodle.itismajo.it/";
+  }
+}
+
+  
+
   </script>
 
 
