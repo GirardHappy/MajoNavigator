@@ -2,7 +2,7 @@
 <html>
 <head> 
   <title> Majo Navigator </title>
- <link rel="shortcut icon" type="image/x-icon" href="M.png">
+ <link rel="shortcut icon" type="image/jpg" href="/M.png"/>
  <link rel="preconnect" href="https://fonts.gstatic.com">
  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
@@ -286,7 +286,7 @@ margin-right: 10px;">
 <!-- Moodle -->
 <td>
 <a href="http://moodle.itismajo.it/" id="Moodle-link">
-  <img src="Moodle.png" style="margin-right:3px" class="Moodle-card" id="Moodle"></div>
+  <img src="Moodle.png" style="margin-right:3px" class="Moodle-card" id="Moodle" oncontextmenu="default_moodle()"></div>
 </a>
 </td>
 
@@ -294,7 +294,7 @@ margin-right: 10px;">
 <!-- Orario -->
 <td>
   <a href="http://www.itismajo.it/orario/index.html" id="Orario-link">
-      <img src="Orario.png" style="margin-right:3px" class="Orario-card" id="Orario"></div>
+      <img src="Orario.png" style="margin-right:3px" class="Orario-card" id="Orario" oncontextmenu="default_orario()"></div>
   </a>
   </td>
 
@@ -338,7 +338,6 @@ margin-right: 10px;">
   }
 
   window.onload = function() {
- document.cookie= "giovanni= ramses; expires= Mon, 3 Feb 2059 12:00:00 GMT";
   var cookiecount = document.cookie.split("; ");
   var foundcookie = false;
   for (var i = 0; i < cookiecount.length; i++) {
@@ -633,7 +632,13 @@ function setcookie() {
   }
 }
 
-  
+function default_moodle() {
+  window.open("http://moodle.itismajo.it/","_self");
+}
+
+function default_orario() {
+  window.open("http://www.itismajo.it/orario/index.html","_self");
+}
 
   </script>
 
