@@ -192,6 +192,7 @@
 <!-- IMMAGINE X SETTINGS -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div>
   <p class="scritta" > Scegli la tua classe </p>
 <select name="options" id="options" style="margin-left: 20%; width: 50%;">
   <option value="default" selected="false">Default</option>
@@ -252,7 +253,9 @@
 <div class="Salva" onclick="setcookie()">Salva</div>
 <p class="credits"> Site made by Girard </p>
 </div>
-  <div id="main">
+</div>
+
+<div id="main">
     <img src="MajoNavigator.png" style="width: 60%;" class="center" onclick="openNav()" id="Titolo"></div>
   </div>
 
@@ -335,6 +338,7 @@ margin-right: 10px;">
   }
 
   window.onload = function() {
+ document.cookie= "giovanni= ramses; expires= Mon, 3 Feb 2059 12:00:00 GMT";
   var cookiecount = document.cookie.split("; ");
   var foundcookie = false;
   for (var i = 0; i < cookiecount.length; i++) {
@@ -619,7 +623,7 @@ margin-right: 10px;">
 
 function setcookie() {
   var userpreference = document.getElementById("options").value;
-  document.cookie = "preference=" + userpreference.toString() + "; ";
+  document.cookie = "preference=" + userpreference.toString() + "; expires= Mon, 3 Feb 2059 12:00:00 GMT";
   window.location.reload();
   if (userpreference == "default") {
     var a = document.getElementById("Orario-link");
