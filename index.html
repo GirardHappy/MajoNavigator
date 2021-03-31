@@ -2,10 +2,11 @@
 <html>
 <head> 
   <title> Majo Navigator </title>
- <link rel="shortcut icon" type="image/x-icon" href="M.png">
+  <!-- Font e icona-->
+ <link rel="shortcut icon" type="image/x-icon" href="/M.png"/>
  <link rel="preconnect" href="https://fonts.gstatic.com">
  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-
+<!--CSS-->
 <style>
 
 .scritta {
@@ -18,9 +19,9 @@
 
 .credits {
   font-family: 'Open+Sans:wght@300&display=swap';
-  font-size: 10px;
+  font-size: 12.5px;
   color: white;
-  margin-left: 60%;
+  margin-left: 50%;
   margin-top: 220%;
 }
 
@@ -250,10 +251,13 @@
   <option value="5 D Inf">5 D Inf</option>
 </select>
 </br>
-<div class="Salva" onclick="setcookie()">Salva</div>
+<div class="Salva" onclick="setcookie()" >Salva</div>
+
+<div><img src="GitHub.png" ondblclick="open_github()" style="width: 12.5%; float: left; margin-top: 215%; margin-left: 5%;" hre></div>
 <p class="credits"> Site made by Girard </p>
 </div>
 </div>
+
 
 <div id="main">
     <img src="MajoNavigator.png" style="width: 60%;" class="center" onclick="openNav()" id="Titolo"></div>
@@ -640,6 +644,9 @@ function default_orario() {
   window.open("http://www.itismajo.it/orario/index.html","_self");
 }
 
+function open_github() {
+  window.open("https://github.com/GirardHappy/MajoNavigator");
+}
   </script>
 
 
