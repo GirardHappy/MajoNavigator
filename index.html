@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Majo Navigator </title>
+    <link rel="shortcut icon" type="image/x-icon" href="Resources/M.png">
+    <link rel="stylesheet" href="Style/Style.css">
+    <script src="Script/Script.js"></script>
+    <script src="Script/links.js"></script>
+</head>
+<body style="background-color: black;">
+        
+    <!-- Titolo-->
+    <div id="main" class="main">
+        <img src="Resources/MajoNavigator.png" style="width: 60%;" class="Titolo" onclick="openNav()">
+    </div>
+
+    <!-- Grid con Card -->
+    <div class="grid-container" id="grid-containter">
+        <a href="https://web.spaggiari.eu/home/app/default/login.php?custcode=TOIT0030"><img src="Resources/Classeviva.png" style="margin-right:3px" class="Classeviva-card" id="Classeviva"></a>
+        <a id="Moodle-link"><img src="Resources/Moodle.png" style="margin-right:3px" class="Moodle-card" id="Moodle" oncontextmenu="default_moodle()"></a>
+        <a id="Orario-link"><img src="Resources/Orario.png" style="margin-right:3px" class="Orario-card" id="Orario" oncontextmenu="default_orario()"></a>
+        <a  href="http://www.itismajo.it/SitePages/Homepage.aspx"><img src="Resources/Sito.png" style="margin-right:3px" class="Sito-card" id="Sito"></a>
+    </div>
+
+    
+
+    <!-- SideNav-->>
+    <div id="mySidenav" class="sidenav"> 
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="scritta">Scegli la classe</a>
+        <select name="options" id="options" class="DropDown">
+            <option value="default" selected="false">Default</option>
+            <option value="1 A">1 A</option>
+            <option value="1 B">1 B</option>
+            <option value="1 C">1 C</option>
+            <option value="1 D">1 D</option>
+            <option value="1 E">1 E</option>
+            <option value="1 F">1 F</option>
+            <option value="1 G">1 G</option>
+            <option value="1 H">1 H</option>
+            <option value="1 I">1 I</option>
+            <option value="1 M">1 M</option>
+            <option value="1 N">1 N</option>
+            <option value="1 O">1 O</option>
+            <option value="2 A">2 A</option>
+            <option value="2 B">2 B</option>
+            <option value="2 C">2 C</option>
+            <option value="2 D">2 D</option>
+            <option value="2 E">2 E</option>
+            <option value="2 F">2 F</option>
+            <option value="2 G">2 G</option>
+            <option value="2 H">2 H</option>
+            <option value="2 I">2 I</option>
+            <option value="2 N">2 N</option>
+            <option value="2 O">2 O</option>
+            <option value="3 A Aut">3 A Aut</option>
+            <option value="3 A Bio">3 A Bio</option>
+            <option value="3 A Inf">3 A Inf</option>
+            <option value="3 B Aut">3 B Aut</option>
+            <option value="3 B Bio">3 B Bio</option>
+            <option value="3 B Inf">3 B Inf</option>
+            <option value="3 C Inf">3 C Inf</option>
+            <option value="3 C Ele">3 C Ele</option>
+            <option value="3 D Inf">3 D Inf</option>
+            <option value="3 TLC">3 TLC</option>
+            <option value="4 A Aut">4 A Aut</option>
+            <option value="4 A Bio">4 A Bio</option>
+            <option value="4 A Inf">4 A Inf</option>
+            <option value="4 B Aut">4 B Aut</option>
+            <option value="4 B Bio">4 B Bio</option>
+            <option value="4 B Inf">4 B Inf</option>
+            <option value="4 C Aut">4 C Aut</option>
+            <option value="4 C Inf">4 C Inf</option>
+            <option value="4 D Inf">4 D Inf</option>
+            <option value="4 Tlc">4 Tlc</option>
+            <option value="5 A Aut">5 A Aut</option>
+            <option value="5 A Bio">5 A Bio</option>
+            <option value="5 A Inf">5 A Inf</option>
+            <option value="5 B Aut">5 B Aut</option>
+            <option value="5 B Bio">5 B Bio</option>
+            <option value="5 B Inf">5 B Inf</option>
+            <option value="5 C Aut">5 C Aut</option>
+            <option value="5 C Inf">5 C Inf</option>
+            <option value="5 D Aut">5 D Aut</option>
+            <option value="5 D Inf">5 D Inf</option>
+        </select>
+        <button onclick="setcookie()">Salva</button>
+        <img src="Resources/GitHub.png" class="GitHub" onclick="open_github()">
+    </div>
+</body>
+</html>
